@@ -49,9 +49,6 @@ M143 H0 S120                                       ; Set temperature limit for h
 M305 P1 T100000 B4725 C7.060000e-8 R4700           ; Set thermistor + ADC parameters for heater 1
 M143 H1 S280                                       ; Set temperature limit for heater 1 to 280C
 
-M307 H0 A160.1, C694.3, D3.6 B0                    ; Set heater0 calibration
-M307 H1 A358.9, C166.1, D4.6 B0                    ; Set heater1 calibration
-
 ; Fans
 M106 P0 S0 I0 F500 H-1                             ; Set fan 0 value, PWM signal inversion and frequency. Thermostatic control is turned off
 M106 P1 S1 I0 F500 H-1                             ; Set fan 1 value, PWM signal inversion and frequency. Thermostatic control is turned off
@@ -65,4 +62,6 @@ G10 P0 R0 S0                                       ; Set initial tool 0 active a
 ; Automatic power saving
 M911 S10 R11 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000" ; Set voltage thresholds and actions to run on power loss
 
-; Custom settings are not configured
+; Custom settings
+M307 H0 A160.1, C694.3, D3.6 B0                    ; Set heater0 calibration
+M307 H1 A358.9, C166.1, D4.6 B0                    ; Set heater1 calibration
