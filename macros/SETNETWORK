@@ -1,0 +1,7 @@
+; SetNetwork macro to set up access to Wifi network
+M552 S0
+G4 P1000
+M587 S"Gallifrey" P"D0ppl64n6r"
+;M587
+;M552 S1
+;M552

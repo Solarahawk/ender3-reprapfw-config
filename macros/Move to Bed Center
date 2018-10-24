@@ -1,0 +1,3 @@
+G1 Z5 F6000 S2          ; lift Z relative to current position
+G28 XY
+G1 X154.5 Y107.5 F4000  ; Move Probe to center of bed
